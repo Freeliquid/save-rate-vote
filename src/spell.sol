@@ -17,9 +17,6 @@
 pragma solidity 0.6.7;
 
 
-// import "./IERC20.sol";
-
-
 interface PauseLike {
     function delay() external returns (uint);
     function exec(address, bytes32, bytes calldata, uint256) external;
@@ -89,7 +86,7 @@ contract SpellActionCommon {
         setupDuty("CRV_3POOL-B", MCD_JUG);
 
 
-        ChainlogAbstract(changeLogAddr).setVersion("1.1.0");
+        ChainlogAbstract(changeLogAddr).setVersion("1.4.0");
     }
 }
 
@@ -98,7 +95,7 @@ contract SpellActionMainnet is SpellActionCommon {
         executeCommon(0xE0fb0a1B0F1db37D803bad3F6d55158291Bb7bAc);
     }
 }
-
+    
 
 
 contract SpellActionKovan is SpellActionCommon {
